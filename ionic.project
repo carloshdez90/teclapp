@@ -1,0 +1,12 @@
+{
+  "name": "teclapp",
+  "app_id": "137bd530",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

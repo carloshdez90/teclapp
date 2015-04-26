@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.geekoders" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>teclapp</name>
+  <description>
+      A project development by 
+        Carlos Alvarez    mathdebian@gmail.com
+        Carlos Hernandez  xscharliexs@gmail.com
+      To: Alcaldia de Santa Tecla, El Salvador.
+    </description>
+  <author email="info@geekoders.com" href="http://geekoders.com/">
+      Geekoders Development Team
+    </author>
+  <content src="index.html"/>
+  <access origin="*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+</widget>
