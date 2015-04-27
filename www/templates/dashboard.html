@@ -1,0 +1,29 @@
+<ion-view view-title="Teclapp">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+        <div class="hero slide-up" style="background-image: url('img/profile-bg.jpg');">
+            <div class="content">
+                <div class="avatar" style="background-color: white; background-image: url('img/logo-tecla.png');"></div>
+                <h3><a class="light">Alcaldia Municipal de</a></h3>
+                <h2><a class="light">Santa Tecla</a></h2>
+            </div>
+        </div>
+        <div class="tabs tabs-dark tabs-icon-top static">
+           
+        </div>
+        
+        <div class="list">
+            <a ui-sref="app.{{element.state}}" class="item item-avatar item-icon-right" ng-repeat="element in elements">
+            
+                <span class="item-icon-left">
+                    <i class="icon ion-{{ element.icon }}"></i>
+                </span>
+                <h2 style="padding-bottom:0.2em;">{{ element.name }}</h2>
+                <span class="item-text-wrap">
+                    <p>{{ element.desc }}</p>
+                </span>
+                <i class="icon ion-chevron-right muted"></i>
+               
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,49 @@
+<ion-view view-title="Perfil del negocio">
+    <ion-content ng-class="{expanded:isExpanded}" class="animate-fade-slide-in">
+        <div class="list half full">
+            <div class="card card-gallery item item-text-wrap">
+                <div class="ink dark-bg">
+                    <h2>{{bussiness.name}}</h2>
+                    <img class="full-image" ng-src="{{imgURL}}">
+                </div>
+                
+                <div class="list">
+                    <div class="item item-icon-left" style="padding-bottom:0.2em;">
+                        <i class="icon ion-ios-paper-outline"></i>
+                        <h3 style="padding-bottom:0.2em;">{{ bussiness.description }}</h3>
+                    </div>
+                    <div class="item item-icon-left" style="padding-bottom:0.2em;">
+                        <i class="icon ion-ios-location-outline"></i>
+                        <h3 style="padding-bottom:0.2em;">{{ bussiness.address }}</h3>
+                    </div>
+                    <div class="item item-icon-left" style="padding-bottom:0.2em;">
+                        <i class="icon ion-ios-telephone-outline"></i>
+                        <h3 style="padding-bottom:0.2em;">{{ bussiness.phone }}</h3>
+                    </div>
+                    <div class="item item-icon-left">
+                        <i class="icon ion-ios-email-outline" style="padding-bottom:0.2em; margin-bottom:1em;"></i>
+                        <h3 style="padding-bottom:0.2em; margin-bottom:1em;">{{ bussiness.email }}</h3>
+                    </div>
+                </div>
+            </div>
+            <button class="button button-block button-calm-900 ink ink-dark" ng-click="seeOffers()" > Ver promociones </button>
+
+            <div class="card ">
+                <div class="ink energized-bg item-text-wrap" ng-if="hasOffers">
+                    <h4 style="padding:1em;">Este negocio no tiene ofertas publicadas :(</h4>
+                </div> 
+                <div class="item-text-wrap" ng-if="showOffers" ng-repeat="offer in offers" style="background-color: #cfcfcf">
+                    <p style="padding:1em;">
+                        <strong>Promo:</strong> {{offer.name}} <br>
+                        <strong>Descripción:</strong> {{offer.description}} <br>
+                        <strong>Precio:</strong> {{offer.price}} <br>
+                        <strong>Vence: </strong> {{offer.expiration | date : format : timezone}}
+                    </p>
+                    
+                </div>   
+                
+
+            </div>
+        <div style="height: 5em;"></div>
+    </ion-content>
+</ion-view>

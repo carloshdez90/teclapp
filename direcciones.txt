@@ -1,0 +1,13 @@
+Negocios
+http://162.243.55.11/teclapp/services/businesses.json
+
+Categorías
+http://162.243.55.11/teclapp/services/categories.json
+
+Información del negocio dado su id
+http://162.243.55.11/teclapp/services/business/1.json
+http://162.243.55.11/teclapp/services/business/2.json
+
+Ofertas de un negocio dado el business_id
+http://162.243.55.11/teclapp/services/offers/1.json
+http://162.243.55.11/teclapp/services/offers/2.json

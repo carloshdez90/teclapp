@@ -1,0 +1,22 @@
+<ion-view view-title="Categorias">
+    <ion-content ng-class="{expanded:$scope.isExpanded}">
+    
+        <div class="content has-header">           
+            <div class="list">                    
+              <a  href="#/app/categories/{{category.id}}/{{category.name}}" class="item item-avatar item-icon-right" ng-repeat="category in categories">
+                  <span class="item-icon-left">
+                      <i class="icon ion-ios-pricetag-outline"></i>
+                  </span>
+                  <h2 style="padding-bottom:0.2em;">{{ category.name }}</h2>
+                  <span class="item-text-wrap">
+                      <p>{{ category.desc }}</p>
+                  </span>
+                  <i class="icon ion-chevron-right muted"></i>
+              </a>           
+            </div>
+            <ion-infinite-scroll on-infinite="loadMore()" distance="5%" spinner="ripple" ng-if="moreData">
+            </ion-infinite-scroll>
+            
+        </div>        
+    </ion-content>
+</ion-view>
